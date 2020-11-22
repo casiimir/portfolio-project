@@ -47,8 +47,7 @@ p {
 
 /* FIRST SECTION */
 .first-sec {
-  height: 100vh;
-  padding: 4rem 0;
+  padding: 4rem 0 0 0;
 }
 
 .navbar a {
@@ -60,19 +59,49 @@ p {
 }
 
 .header-first-sec {
+  margin-top: 10%;
   font-size: 8rem;
-  padding: 10rem 0;
 }
 
-.container-image-up img {
-  width: 75%;
-  height: 50%;
-  position: absolute;
-  top: 75%;
-  left: 12.5%;
+.astronaut {
+  height: 15rem;
+  position: relative;
+  top: 30px;
+  right: 40px;
+  background-image: url('./img/astronaut.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   overflow: hidden;
   z-index: -1;
 }
+
+.universe {
+  height: 20rem;
+  width: 20rem;
+  margin: 0 auto;
+  position: relative;
+  background-image: url('./img/universe.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.planet-www {
+  width: 50px;
+  height: 50px;
+  background-image: url('./img/planet-www.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: orbit 5s linear infinite;
+  position: relative;
+  bottom: 20%;
+  left: 50%;
+  z-index: -2;
+}
+
 
 /* SECOND SECTION */
 .second-sec {
@@ -183,12 +212,10 @@ li {
   display: inline;
 }
 
-
-
 /* MEDIA QUERY */
 @media (max-width: 1480px) {
   p {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .container-fluid {
@@ -199,12 +226,6 @@ li {
   .header-first-sec {
     font-size: 4em;
   }
-  .astronaut img {
-    width: 16rem;
-    position: relative;
-    bottom: -10rem;
-    left: -2.8rem;
-  }
   .soft-skills {
     font-size: 3rem;
     font-family: 'Lovelo';
@@ -213,34 +234,6 @@ li {
     width: 42px;
   }
 }
-
-@media (max-width: 540px) {
-  .astronaut img {
-  width: 16rem;
-  position: relative;
-  top: 5.8rem;
-  left: -2.8rem;
-  }
-}
-
-@media (min-width: 531px) {
-  .astronaut img {
-  width: 16rem;
-  position: relative;
-  top: -3.8rem;
-  left: -2.8rem;
-  }
-}
-
-@media (max-width: 530px) {
-  .astronaut img {
-  width: 13rem;
-  position: relative;
-  bottom: 5.6rem;
-  left: -2.8rem;
-  }
-}
-
 
 @media (max-width: 620px) {
   .soft-skills {
@@ -256,43 +249,22 @@ li {
     transform: rotate(180deg);
     writing-mode: vertical-lr;
   }
-  .astronaut img {
-    width: 13rem;
-    position: relative;
-    bottom: 10.6rem;
-    left: -2.8rem;
-  }  
 }
 
-@media (min-width: 531px) {
-  .astronaut img {
-  width: 16rem;
-  position: relative;
-  top: 1rem;
-  left: -2.8rem;
-  }
-}
-
-@media (min-width: 619px) {
-  .astronaut img {
-  width: 16rem;
-  position: relative;
-  top: -0.8rem;
-  left: -2.8rem;
-  }
-}
-
-@media (min-width: 1481px) {
-  .astronaut img {
-  width: 22rem;
-  position: relative;
-  top: -11.1rem;
-  left: -3.6rem;
-  }
-}
 
 
 .neon-effect:hover {
   color:  #FF5DE0;
   text-shadow: 0 0 3vw #9326FF;
+}
+
+
+
+@keyframes orbit {
+  from {
+    transform: translate(-70%, -350%) rotate(0deg) translateX(220px);
+  }
+  to {
+    transform: translate(-70%, -350%) rotate(360deg) translateX(220px);
+  }
 }
