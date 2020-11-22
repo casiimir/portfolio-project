@@ -86,7 +86,7 @@ p {
   width: 20rem;
   margin: 0 auto;
   position: relative;
-  background-image: url('./img/universe.svg');
+  background-image: url('./img/universe.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
