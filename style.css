@@ -8,8 +8,13 @@
   src: url(./font/Lovelo-Black.woff);
 }
 
+* {
+  overflow: hidden;
+}
+
 html {  
   scroll-behavior: smooth;
+  overflow-y: auto;
 }
 
 body {
@@ -86,27 +91,14 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;
-  z-index: 0;
+  z-index: -1;
 }
-
-.planet-www {
-  width: 50px;
-  height: 50px;
-  background-image: url('./img/planet-www.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation: orbit 5s linear infinite;
-  position: relative;
-  bottom: 20%;
-  left: 50%;
-  z-index: -2;
-}
-
 
 /* SECOND SECTION */
 .second-sec {
   background-color: #1b1b1b;
   color: #F3F4F4;
+  margin-top: -40vh !important;
   /* position: relative; */
 }
 
@@ -253,18 +245,80 @@ li {
 
 
 
-.neon-effect:hover {
+.neon-effect:active {
   color:  #FF5DE0;
   text-shadow: 0 0 3vw #9326FF;
 }
 
 
 
-@keyframes orbit {
+/* PLANETS ORBIT */
+
+@keyframes first-orbit {
   from {
-    transform: translate(-70%, -350%) rotate(0deg) translateX(220px);
+    transform: translate(-70%, -400%) rotate(80deg) translateX(190px);
   }
   to {
-    transform: translate(-70%, -350%) rotate(360deg) translateX(220px);
+    transform: translate(-70%, -400%) rotate(440deg) translateX(190px);
   }
+}
+
+@keyframes second-orbit {
+  from {
+    transform: translate(-70%, -460%) rotate(80deg) translateX(360px);
+  }
+  to {
+    transform: translate(-70%, -460%) rotate(440deg) translateX(360px);
+  }
+}
+
+
+.planet-node, .planet-html, .planet-css, .planet-react, .planet-js,
+.planet-php, .planet-wp, .planet-git, .planet-npm {
+  width: 32px;
+  height: 32px;
+  background-image: url('./img/nodejs.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: first-orbit 7s linear infinite;
+  position: relative;
+  left: 50%;
+  top: -10.5vh;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.planet-html {
+  background-image: url('./img/html-5.png');
+  animation: first-orbit 12s linear infinite;
+}
+
+.planet-css {
+  background-image: url('./img/css.png');
+  animation: second-orbit 16s linear infinite;
+}
+
+.planet-js {
+  background-image: url('./img/javascript.png');
+  animation: second-orbit 8s linear infinite;
+}
+
+.planet-react {
+  background-image: url('./img/react.png');
+  animation: first-orbit 6s linear infinite;
+}
+
+.planet-wp {
+  background-image: url('./img/wp.png');
+  animation: second-orbit 10s linear infinite;
+}
+
+.planet-git {
+  background-image: url('./img/git.png');
+  animation: first-orbit 10s linear infinite;
+}
+
+.planet-wp {
+  background-image: url('./img/npm.png');
+  animation: second-orbit 10s linear infinite;
 }
