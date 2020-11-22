@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@font-face {
+  font-family: Lovelo;
+  src: url(./font/Lovelo-LineLight.woff);
+}
+@font-face {
+  font-family: Lovelo-Normal;
+  src: url(./font/Lovelo-Black.woff);
+}
+
+html {  
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F3F4F4;
+  color: #1b1b1b;  
+}
+
+h1 {
+  font-family: 'Lovelo';
+}
+
+h2, h3 {
+  margin: 0;
+  font-family: 'Lovelo-Normal';
+}
+
+p {
+  font-family: 'Montserrat';
+  font-size: 1.5em;
+}
+
+.custom-text-one {
+  color: #FF5DE0;
+}
+
+.custom-test-two {
+  color: #9326FF;
+}
+
+.container-fluid {
+  width: auto;
+  margin: 0 15%;
+  padding: 4rem;
+}
+
+/* FIRST SECTION */
+.first-sec {
+  height: 100vh;
+  padding: 4rem 0;
+}
+
+.navbar a {
+  font-family: Lovelo-Normal;
+}
+
+.navbar a:hover {
+  color: #9326FF !important;
+}
+
+.header-first-sec {
+  font-size: 8rem;
+  padding: 10rem 0;
+}
+
+.container-image-up img {
+  width: 75%;
+  height: 50%;
+  position: absolute;
+  top: 75%;
+  left: 12.5%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* SECOND SECTION */
+.second-sec {
+  background-color: #1b1b1b;
+  color: #F3F4F4;
+  /* position: relative; */
+}
+
+.second-sec-iam {
+  opacity: 0.075;
+  font-size: 8em;
+  font-family: 'Lovelo-Normal';
+  writing-mode: vertical-lr;
+  position: relative;
+  top: 300px;
+  right: 70px;
+}
+
+.second-sec-head {
+  font-size: 4rem;  
+  writing-mode: vertical-lr;
+}
+
+.third-sec-head {
+  font-size: 4rem;  
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+}
+
+.third-sec-iam {
+  opacity: 0.075;
+  font-size: 8em;
+  font-family: 'Lovelo-Normal';
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  position: relative;
+  top: 0;
+  left: 150px;
+}
+
+.soft-skills {
+  font-size: 4rem;
+  font-family: 'Lovelo';
+}
+
+.container-soft-skills {
+  padding: 100px 0;
+}
+
+
+/* THIRD SEC */
+.third-sec {  
+  padding: 4rem 0;
+}
+
+
+.tester {
+  border: 2px solid red;
+}
+
+
+/* FOURTH SEC */
+.fourth-sec {
+  padding: 4rem 0;
+  background-color: #1b1b1b;
+  color:#F3F4F4;
+}
+
+.proj {
+  background-image: url('./img/gradient.svg');
+  background-size: 28em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-carousel-title {
+  padding: 50px 0;
+}
+
+.item-carousel-text {
+  margin: 40px 40px;
+} 
+
+.proj-img {
+  width: 80%;
+  opacity: 0.95;
+}
+
+/* FOOTER SEC */
+
+.footer {
+  padding: 4rem 0;
+}
+
+.footer-text {
+  padding: 5rem;
+}
+
+.social-links {
+  padding: 4rem 0;
+}
+
+.social-img {
+  width: 72px;
+}
+
+li {
+  display: inline;
+}
+
+
+
+/* MEDIA QUERY */
+@media (max-width: 1480px) {
+  p {
+    font-size: 1.2em;
+  }
+
+  .container-fluid {
+    margin: 0;
+    padding: 50px 25px;
+  }
+
+  .header-first-sec {
+    font-size: 4em;
+  }
+  .astronaut img {
+    width: 16rem;
+    position: relative;
+    bottom: -10rem;
+    left: -2.8rem;
+  }
+  .soft-skills {
+    font-size: 3rem;
+    font-family: 'Lovelo';
+  }
+  .social-img {
+    width: 42px;
+  }
+}
+
+@media (max-width: 540px) {
+  .astronaut img {
+  width: 16rem;
+  position: relative;
+  top: 5.8rem;
+  left: -2.8rem;
+  }
+}
+
+@media (min-width: 531px) {
+  .astronaut img {
+  width: 16rem;
+  position: relative;
+  top: -3.8rem;
+  left: -2.8rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .astronaut img {
+  width: 13rem;
+  position: relative;
+  bottom: 5.6rem;
+  left: -2.8rem;
+  }
+}
+
+
+@media (max-width: 620px) {
+  .soft-skills {
+    font-size: 2.2rem;
+    font-family: 'Lovelo';
+  }
+  .second-sec-head {
+    font-size: 3rem;  
+    writing-mode: vertical-lr;
+  }  
+  .third-sec-head {
+    font-size: 3rem;  
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+  }
+  .astronaut img {
+    width: 13rem;
+    position: relative;
+    bottom: 10.6rem;
+    left: -2.8rem;
+  }  
+}
+
+@media (min-width: 531px) {
+  .astronaut img {
+  width: 16rem;
+  position: relative;
+  top: 1rem;
+  left: -2.8rem;
+  }
+}
+
+@media (min-width: 619px) {
+  .astronaut img {
+  width: 16rem;
+  position: relative;
+  top: -0.8rem;
+  left: -2.8rem;
+  }
+}
+
+@media (min-width: 1481px) {
+  .astronaut img {
+  width: 22rem;
+  position: relative;
+  top: -11.1rem;
+  left: -3.6rem;
+  }
+}
+
+
+.neon-effect:hover {
+  color:  #FF5DE0;
+  text-shadow: 0 0 3vw #9326FF;
+}
