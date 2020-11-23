@@ -10,16 +10,22 @@
 
 * {
   overflow: hidden;
+  transition-duration: 0.5s;
+}
+
+.light-on {
+  background-color: #F3F4F4;  
+  color: #1b1b1b;
+}
+
+.light-off {
+  background-color: #1b1b1b;  
+  color: #F3F4F4;
 }
 
 html {  
   scroll-behavior: smooth;
   overflow-y: auto;
-}
-
-body {
-  background-color: #F3F4F4;
-  color: #1b1b1b;  
 }
 
 h1 {
@@ -57,10 +63,24 @@ p {
 
 .navbar a {
   font-family: Lovelo-Normal;
+  color: #686868 !important;
 }
 
 .navbar a:hover {
   color: #9326FF !important;
+}
+
+.light-bulb {
+  background-image: url('./img/light-bulb-off.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  width: 25px;
+  position: fixed;
+  top: 0;
+  right: 5%;
+  z-index: 2;
 }
 
 .header-first-sec {
@@ -95,10 +115,10 @@ p {
 }
 
 /* SECOND SECTION */
+/* I need to force margin-top for a, controlled, effect in the 'universe.png' */
 .second-sec {
-  background-color: #1b1b1b;
-  color: #F3F4F4;
-  margin-top: -40vh !important;
+  margin-top: -44vh !important;  
+  background-color: #F3F4F4;
   /* position: relative; */
 }
 
@@ -158,8 +178,6 @@ p {
 /* FOURTH SEC */
 .fourth-sec {
   padding: 4rem 0;
-  background-color: #1b1b1b;
-  color:#F3F4F4;
 }
 
 .proj {
@@ -198,11 +216,16 @@ p {
 }
 
 .social-img {
-  width: 72px;
+  width: 64px;
+}
+
+ul {
+  padding: 20px;
 }
 
 li {
   display: inline;
+  padding: 8px;
 }
 
 /* MEDIA QUERY */
@@ -228,25 +251,43 @@ li {
   }
 }
 
-@media (max-width: 620px) {
-  .soft-skills {
-    font-size: 2.2rem;
-    font-family: 'Lovelo';
-  }
+@media (max-width: 1280px) {  
   .second-sec-head {
-    font-size: 3rem;  
+    font-size: 2.5rem;  
     writing-mode: vertical-lr;
   }  
   .third-sec-head {
-    font-size: 3rem;  
+    font-size: 2.5rem;  
     transform: rotate(180deg);
     writing-mode: vertical-lr;
   }
 }
 
+@media (max-width: 620px) {
+  .soft-skills {
+    font-size: 2.2rem;
+    font-family: 'Lovelo';
+  }  
+}
+
+/* Hide 'Iam' section when too small*/
+@media (max-width: 770px) {
+  .second-sec-iam, .third-sec-iam {
+    visibility: hidden;
+  }
+}
 
 
-.neon-effect:active {
+/* FIX Philosopher write*/
+@media (min-width: 765px) {
+  .sec-philosopher {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+.neon-effect{
   color:  #FF5DE0;
   text-shadow: 0 0 3vw #9326FF;
 }
@@ -319,7 +360,7 @@ li {
   animation: first-orbit 10s linear infinite;
 }
 
-.planet-wp {
+.planet-npm {
   background-image: url('./img/npm.png');
   animation: second-orbit 10s linear infinite;
 }
