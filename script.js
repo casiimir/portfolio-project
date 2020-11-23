@@ -1,26 +1,33 @@
-let lightState = false;
-const btnLight = document.querySelector('#turnLight');
-const body = document.querySelector("body");
-const firstSection = document.querySelector('.second-sec');
-const title = document.querySelector('.header-first-sec');
-const lightBulb = document.querySelector('.light-bulb');
+let isOn = false;
+const domElements = {
+  body: document.querySelector("body"),
+  firstSec: document.querySelector('.second-sec'),
+  title: document.querySelector('.header-first-sec'),
+  lightBulb: document.querySelector('.light-bulb'),
+  lightButton: document.querySelector('#turnLight'),
+};
 
-const powerBtn = () => {
-  if (!lightState) {
-    body.classList.add("light-off");
-    firstSection.style.backgroundColor = '#1b1b1b';
-    title.classList.add("neon-effect");
-    lightBulb.style.backgroundImage = 'url(./img/light-bulb-on.png)';
-  } else {
-    body.classList.remove("light-off");     
-    title.classList.remove("neon-effect");
-    firstSection.style.backgroundColor = '#F3F4F4';      
-    lightBulb.style.backgroundImage = 'url(./img/light-bulb-off.png)'; 
-  }
-  console.log(lightState)
-  lightState ? lightState = false : lightState = true;
-  console.log("click")
+const { body, firstSec, title, lightBulb, lightButton} = domElements;
+
+const lightOff = () => {
+  body.classList.add("light-off");
+  firstSec.style.backgroundColor = '#1b1b1b';
+  title.classList.add("neon-effect");
+  lightBulb.style.backgroundImage = 'url(./img/light-bulb-on.png)';
 }
 
-btnLight.addEventListener("click", powerBtn);
+const lightOn = () => {
+  body.classList.remove("light-off");     
+  title.classList.remove("neon-effect");
+  firstSec.style.backgroundColor = '#F3F4F4';      
+  lightBulb.style.backgroundImage = 'url(./img/light-bulb-off.png)'; 
+}
+
+const lightOnOff = () => {
+  if (!isOn) lightOff();
+  else lightOn();
+  isOn ? isOn = false : isOn = true;
+}
+
+lightButton.addEventListener("click", lightOnOff);
 
