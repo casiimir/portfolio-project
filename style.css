@@ -278,7 +278,7 @@ p {
 }
 
 .planet-node, .planet-html, .planet-css, .planet-react, .planet-js,
-.planet-php, .planet-wp, .planet-git, .planet-npm {
+.planet-php, .planet-wp, .planet-git {
   background-image: url('./img/nodejs.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -315,10 +315,6 @@ p {
 .planet-git {
   background-image: url('./img/git.png');
   animation: first-orbit 10s linear infinite;
-}
-.planet-npm {
-  background-image: url('./img/npm.png');
-  animation: second-orbit 10s linear infinite;
 }
 
 
