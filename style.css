@@ -8,64 +8,84 @@
   src: url(./font/Lovelo-Black.woff);
 }
 
+
+
 * {
   overflow: hidden;
   transition-duration: 0.5s;
+}
+html {  
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+a {  
+  text-decoration: none !important;
+}
+h1 {
+  font-family: 'Lovelo';
+}
+h2, h3 {
+  margin: 0;
+  font-family: 'Lovelo-Normal';
+}
+p {
+  font-family: 'Montserrat';
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+
+/* Various */
+.container-fluid {
+  width: auto;
+  margin: 0 15%;
+  padding: 4rem 0 0 0;
+}
+
+.custom-text {
+  color: #FF5DE0;
+}
+
+.fas{
+  color: #9326FF;
+  font-size: 1.7em;   
+}
+.fas:hover {
+  color: #FF5DE0;
 }
 
 .light-on {
   background-color: #F3F4F4;  
   color: #1b1b1b;
 }
-
 .light-off {
   background-color: #1b1b1b;  
   color: #F3F4F4;
 }
 
-html {  
-  scroll-behavior: smooth;
-  overflow-y: auto;
+.neon-effect{
+  color:  #FF5DE0;
+  text-shadow: 0 0 3vw #9326FF;
 }
 
-h1 {
-  font-family: 'Lovelo';
-}
 
-h2, h3 {
-  margin: 0;
-  font-family: 'Lovelo-Normal';
-}
-
-p {
-  font-family: 'Montserrat';
-  font-size: 1.5em;
-}
-
-.custom-text-one {
-  color: #FF5DE0;
-}
-
-.custom-test-two {
-  color: #9326FF;
-}
-
-.container-fluid {
-  width: auto;
-  margin: 0 15%;
-  padding: 4rem;
-}
 
 /* FIRST SECTION */
 .first-sec {
-  padding: 4rem 0 0 0;
+  text-align: center;
 }
 
+.navbar-toggler {
+  border: 0;
+}
+.navbar-toggler:focus {
+  outline: none !important;
+  transform: rotate(270deg);
+}
 .navbar a {
   font-family: Lovelo-Normal;
   color: #686868 !important;
 }
-
 .navbar a:hover {
   color: #9326FF !important;
 }
@@ -75,24 +95,22 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: absolute;
   height: 50px;
   width: 50px;
-  position: absolute;
-  top: 7%;
-  right: 6%;
-  z-index: 2;
+  top: 10%;
+  right: 5%;
+  margin-right: 40px;
   transform: scaleX(1);
-  margin: 25px;
 }
-
 .light-bulb {
   background-image: url('./img/light-bulb-off.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: fixed;
   height: 120px;
   width: 25px;
-  position: fixed;
   top: 0;
   right: 5%;
   z-index: 2;
@@ -105,222 +123,142 @@ p {
 }
 
 .astronaut {
-  height: 15rem;
-  position: relative;
-  top: 30px;
-  right: 40px;
   background-image: url('./img/astronaut.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.universe {
-  height: 20rem;
-  width: 20rem;
-  margin: 0 auto;
   position: relative;
+  height: 15rem;
+  top: 30px;
+  right: 40px;
+  z-index: -1;
+  overflow: hidden;
+}
+.universe {
   background-image: url('./img/universe.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  overflow: hidden;
+  position: relative;
+  height: 20rem;
+  width: 20rem;
+  margin: 0 auto;
   z-index: -1;
+  overflow: hidden;
 }
 
 /* SECOND SECTION */
-/* I need to force margin-top for a, controlled, effect in the 'universe.png' */
 .second-sec {
   margin-top: -44vh !important;  
   background-color: #F3F4F4;
-  /* position: relative; */
 }
 
-.second-sec-iam {
+.second-sec-iam, .third-sec-iam {
   opacity: 0.075;
   font-size: 8em;
   font-family: 'Lovelo-Normal';
   writing-mode: vertical-lr;
   position: relative;
+}
+.second-sec-iam {  
   top: 300px;
   right: 70px;
 }
-
-.second-sec-head {
-  font-size: 4rem;  
-  writing-mode: vertical-lr;
-}
-
-.third-sec-head {
-  font-size: 4rem;  
-  transform: rotate(180deg);
-  writing-mode: vertical-lr;
-}
-
 .third-sec-iam {
-  opacity: 0.075;
-  font-size: 8em;
-  font-family: 'Lovelo-Normal';
-  transform: rotate(180deg);
-  writing-mode: vertical-lr;
-  position: relative;
   top: 0;
   left: 150px;
+  transform: rotate(180deg);
+}
+
+.second-sec-head, .third-sec-head {
+  font-size: 4rem;  
+  writing-mode: vertical-lr;
+}
+.third-sec-head {  
+  transform: rotate(180deg);
 }
 
 .soft-skills {
   font-size: 4rem;
   font-family: 'Lovelo';
+  text-align: center;
 }
-
 .container-soft-skills {
   padding: 100px 0;
 }
 
 
-/* THIRD SEC */
-.third-sec {  
-  padding: 4rem 0;
-}
-
-
-.tester {
-  border: 2px solid red;
-}
-
 
 /* FOURTH SEC */
-.fourth-sec {
-  padding: 4rem 0;
-}
-
 .proj {
   background-image: url('./img/gradient.svg');
   background-size: 20em;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.carousel-item {
+  text-align: center;
+}
+
 .item-carousel-title {
   padding: 50px 0;
 }
 
-.item-carousel-text {
-  margin: 40px 40px;
-} 
-
 .proj-img {
-  width: 300px;
-  height: 180px;
+  width: 18rem;
+  height: 10rem;
   opacity: 0.9;
 }
-
 .proj-img:hover {
   opacity: 1;
 }
-
 .proj-img:active {  
   padding: 0;
   transform: scale(0.8,0.8);
   transition-duration: 0s;
 }
 
-/* FOOTER SEC */
 
+
+/* FOOTER SEC */
 .footer {
   padding: 4rem 0;
+  text-align: center;
 }
 
-.footer-text {
-  padding: 5rem;
-}
-
-.social-links {
-  padding: 4rem 0;
+.footer-header {
+  margin: 5% 0 15% 0;
+  text-align: center;
 }
 
 .social-img {
   width: 64px;
 }
-
-ul {
+.social-list {
   padding: 20px;
 }
-
-li {
+.social-item {
   display: inline;
   padding: 5px;
 }
 
-/* MEDIA QUERY */
-@media (max-width: 1480px) {
-  p {
-    font-size: 1em;
-  }
-
-  .container-fluid {
-    margin: 0;
-    padding: 50px 25px;
-  }
-
-  .header-first-sec {
-    font-size: 4em;
-  }
-  .soft-skills {
-    font-size: 3rem;
-    font-family: 'Lovelo';
-  }
-  .social-img {
-    width: 42px;
-  }
+.go-up {
+  text-align: right;
 }
-
-@media (max-width: 1280px) {  
-  .second-sec-head {
-    font-size: 2.5rem;  
-    writing-mode: vertical-lr;
-  }  
-  .third-sec-head {
-    font-size: 2.5rem;  
-    transform: rotate(180deg);
-    writing-mode: vertical-lr;
-  }
+.go-up a {
+  margin: 0;
+  padding: 0;
+  color: #9326FF;
+  font-size: 1.5em;
 }
-
-@media (max-width: 620px) {
-  .soft-skills {
-    font-size: 2.2rem;
-    font-family: 'Lovelo';
-  }  
-}
-
-/* Hide 'Iam' section when too small*/
-@media (max-width: 770px) {
-  .second-sec-iam, .third-sec-iam {
-    visibility: hidden;
-  }
-}
-
-
-/* FIX Philosopher write*/
-@media (min-width: 765px) {
-  .sec-philosopher {
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
-
-.neon-effect{
-  color:  #FF5DE0;
-  text-shadow: 0 0 3vw #9326FF;
+.go-up a:hover {
+  color:#FF5DE0;
 }
 
 
 
-/* PLANETS ORBIT */
-
+/* PLANETS ANIMATION */
 @keyframes first-orbit {
   from {
     transform: translate(-70%, -400%) rotate(80deg) translateX(190px);
@@ -339,53 +277,102 @@ li {
   }
 }
 
-
 .planet-node, .planet-html, .planet-css, .planet-react, .planet-js,
 .planet-php, .planet-wp, .planet-git, .planet-npm {
-  width: 32px;
-  height: 32px;
   background-image: url('./img/nodejs.png');
   background-size: contain;
   background-repeat: no-repeat;
-  animation: first-orbit 7s linear infinite;
   position: relative;
   left: 50%;
   top: -10.5vh;
+  width: 32px;
+  height: 32px;  
   z-index: -2;
   overflow: hidden;
+  animation: first-orbit 7s linear infinite;
 }
 
 .planet-html {
   background-image: url('./img/html-5.png');
   animation: first-orbit 12s linear infinite;
 }
-
 .planet-css {
   background-image: url('./img/css.png');
   animation: second-orbit 16s linear infinite;
 }
-
 .planet-js {
   background-image: url('./img/javascript.png');
   animation: second-orbit 8s linear infinite;
 }
-
 .planet-react {
   background-image: url('./img/react.png');
   animation: first-orbit 6s linear infinite;
 }
-
 .planet-wp {
   background-image: url('./img/wp.png');
   animation: second-orbit 10s linear infinite;
 }
-
 .planet-git {
   background-image: url('./img/git.png');
   animation: first-orbit 10s linear infinite;
 }
-
 .planet-npm {
   background-image: url('./img/npm.png');
   animation: second-orbit 10s linear infinite;
+}
+
+
+
+/* MEDIA QUERY */
+@media (max-width: 620px) {
+  .soft-skills {
+    font-size: 2.2rem;
+    font-family: 'Lovelo';
+  }  
+}
+
+@media (min-width: 765px) {
+  .sec-philos {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 1280px) {  
+  .second-sec-head {
+    font-size: 2.5rem;  
+    writing-mode: vertical-lr;
+  }  
+  .third-sec-head {
+    font-size: 2.5rem;  
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+  }  
+  .second-sec-iam, .third-sec-iam {
+    display: none;
+  }  
+}
+
+@media (max-width: 1480px) {
+  p {
+    font-size: 1em;
+  }
+
+  .container-fluid {
+    margin: 0;
+    padding: 50px 25px;
+  }
+
+  .header-first-sec {
+    font-size: 4em;
+  }
+
+  .soft-skills {
+    font-size: 3rem;
+    font-family: 'Lovelo';
+  }
+
+  .social-img {
+    width: 42px;
+  }
 }
