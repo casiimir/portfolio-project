@@ -96,6 +96,7 @@ p {
   top: 0;
   right: 5%;
   z-index: 2;
+  cursor: pointer;  
 }
 
 .header-first-sec {
@@ -197,11 +198,10 @@ p {
 
 .proj {
   background-image: url('./img/gradient.svg');
-  background-size: 28em;
+  background-size: 20em;
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .item-carousel-title {
   padding: 50px 0;
 }
@@ -211,9 +211,19 @@ p {
 } 
 
 .proj-img {
-  width: 400px;
-  height: 250px;
-  opacity: 0.95;
+  width: 300px;
+  height: 180px;
+  opacity: 0.9;
+}
+
+.proj-img:hover {
+  opacity: 1;
+}
+
+.proj-img:active {  
+  padding: 0;
+  transform: scale(0.8,0.8);
+  transition-duration: 0s;
 }
 
 /* FOOTER SEC */
