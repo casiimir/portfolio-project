@@ -131,7 +131,7 @@ p {
   height: 15rem;
   top: 30px;
   right: 40px;
-  z-index: -1;
+  z-index: 1;
   overflow: hidden;
 }
 .universe {
