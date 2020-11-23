@@ -178,7 +178,8 @@ p {
 } 
 
 .proj-img {
-  width: 80%;
+  width: 400px;
+  height: 250px;
   opacity: 0.95;
 }
 
