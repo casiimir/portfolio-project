@@ -36,6 +36,15 @@ p {
 
 
 /* Various */
+.bg-pattern {
+  background-image: url('./img/pattern.png');
+  height: 100%;
+  width: 100%;
+  opacity: 0.15;
+  position: absolute;
+  z-index: -1;
+}
+
 .container-fluid {
   width: auto;
   margin: 0 15%;
@@ -104,11 +113,13 @@ p {
   position: absolute;
   height: 50px;
   width: 50px;
-  top: 10%;
-  right: 5%;
+  top: 9%;
+  right: 6%;
   margin-right: 40px;
-  transform: scaleX(1);
+  transform: scaleX(1.2);
+  /* filter: drop-shadow(6px 20px 2px) invert(60%); */
 }
+
 .light-bulb {
   background-image: url('./img/light-bulb-off.png');
   background-repeat: no-repeat;
@@ -117,10 +128,18 @@ p {
   position: fixed;
   height: 120px;
   width: 25px;
-  top: 0;
+  top: -20px;
   right: 5%;
   z-index: 2;
   cursor: pointer;  
+}
+
+.arrow-light-bulb-shade, .lightBulb-shade {  
+  filter: drop-shadow(6px 20px 1.5px rgb(0, 0, 0));
+}
+
+.light-bulb:hover, .light-bulb:active{  
+  top: 0px;
 }
 
 .header-first-sec {
@@ -138,8 +157,10 @@ p {
   top: 30px;
   right: 40px;
   z-index: 0;
-  overflow: hidden;
+  overflow: hidden;  
+  filter: drop-shadow(12px -3px 3px rgba(0, 0, 0, 0.500));
 }
+
 .universe {
   background-image: url('./img/universe.png');
   background-position: center;
@@ -241,14 +262,23 @@ p {
 .social-img {
   width: 64px;
 }
+.social-img:hover {  
+  transform: scale(1.5);
+}
+
 .social-list {
   padding: 20px;
 }
 .social-item {
   display: inline;
-  padding: 5px;
+  padding: 10px;
+  filter: drop-shadow(6px 0px 3px rgba(0, 0, 0, 0.500));
 }
-
+.social-item:hover {
+  display: inline;
+  padding: 10px;  
+  filter: drop-shadow(6px 0px 3px rgba(0, 0, 0, 0.500));
+}
 .go-up {
   text-align: right;
 }
