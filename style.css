@@ -362,6 +362,17 @@ p {
     font-family: 'Lovelo';
   }  
 }
+@media (max-width: 680px) {
+  .second-sec {
+    margin-top: -65vh !important;  
+  }
+}
+
+@media (max-width: 765px) {
+  .second-sec {
+    margin-top: -58vh !important;  
+  }
+}
 
 @media (min-width: 765px) {
   .sec-philos {
@@ -369,6 +380,7 @@ p {
     justify-content: flex-end;
   }
 }
+
 
 @media (max-width: 1280px) {  
   .second-sec-head {
