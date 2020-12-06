@@ -1,6 +1,7 @@
 function typeWriter () {
-  const itsMe = document.querySelector('.itsme');
   const text = "RONT END DEVELOPER";
+  const itsMe = document.querySelector('.itsme');
+  itsMe.textContent = 'F';
 
   let i = 0;
   setInterval(() => {
