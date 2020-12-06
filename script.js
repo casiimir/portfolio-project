@@ -1,4 +1,5 @@
 let isOn = false;
+
 const domElements = {
   body: document.querySelector("body"),
   firstSec: document.querySelector('.second-sec'),
@@ -30,4 +31,3 @@ const lightOnOff = () => {
 }
 
 lightButton.addEventListener("click", lightOnOff);
-

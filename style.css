@@ -68,6 +68,12 @@ p {
   text-shadow: 0 0 3vw #9326FF;
 }
 
+.itsme {
+  text-align: left;
+  max-width: 315px;
+  margin: 0 auto;
+}
+
 
 
 /* FIRST SECTION */
